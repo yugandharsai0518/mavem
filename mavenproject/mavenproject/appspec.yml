@@ -1,0 +1,12 @@
+version: 0.0
+os: windows
+
+files:
+  - source: target/calculator-1.0-SNAPSHOT.jar
+    destination: C:\JavaApp
+
+hooks:
+  AfterInstall:
+    - location: scripts\start_server.bat
+      timeout: 300
+      runas: Administrator
